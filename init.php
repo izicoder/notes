@@ -1,6 +1,6 @@
 <?php
 
-include './mysql.php'
+include './mysql.php';
 
 $dblink = mysqli_connect($host, $user, $password, $db);
 
