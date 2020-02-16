@@ -10,7 +10,6 @@ function rendernote($note) {
     return <<<rendered
         <div class="note" id="$safeId">
         <span class="notetext">$safeText</span><br>
-<<<<<<< HEAD
         <span class="noteinfo"> posted <b>$safeDate</b></span>
         <form action="updatenote.php" method="post">
         <textarea name="updatetext" placeholder="Write something"></textarea><br>
@@ -21,10 +20,6 @@ function rendernote($note) {
         <input type="hidden" name="noteid" value="$safeId">
         <input type="submit" value="delete note">
         </form>
-=======
-        <span class="noteinfo"> posted <b>$safeDate</b> with id <b>$safeId</b>
-        </span>
->>>>>>> c1cc9cae043c5e87af96121adc9c956183991f3a
         </div>
     rendered;
 }
