@@ -1,0 +1,23 @@
+.notetext {
+    font-size: large;
+    background-color: lightyellow;
+}
+
+.noteinfo {
+    font-size: small;
+    background-color: linen;
+}
+
+.note {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forms {
+    margin-top: 10px;
+}
+
+.forms form {
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
