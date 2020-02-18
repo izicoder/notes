@@ -2,7 +2,7 @@
 
 include './mysql.php';
 
-$id = (int)$_POST['noteid'];
+$id = (int) $_POST['noteid'];
 
 $dblink = mysqli_connect($host, $user, $password, $db);
 
@@ -21,6 +21,4 @@ if (!$dblink) {
 
 $dblink->close();
 
-header('Location: index.php')
-
-?>
+header('Location: index.php');

@@ -2,7 +2,8 @@
 
 include './mysql.php';
 
-function rendernote($note) {
+function rendernote($note)
+{
     $safeId = htmlspecialchars($note[0]);
     $safeText = htmlspecialchars($note[1]);
     $safeDate = htmlspecialchars($note[2]);
@@ -43,5 +44,3 @@ if (!$dblink) {
 }
 
 $dblink->close();
-
-?>

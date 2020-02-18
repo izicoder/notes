@@ -14,7 +14,7 @@ if (empty($_POST['newtext'])) {
         echo '<p>Database connection error ' . mysqli_connect_errno() . '<br>';
         echo mysqli_connect_error() . '</p>';
     } else {
-        $sqlquery = $dblink->prepare('insert into notes (notetext, postdate) values (?, now());');    
+        $sqlquery = $dblink->prepare('insert into notes (notetext, postdate) values (?, now());');
         $sqlquery->bind_param('s', $finaltext);
         if (!$sqlquery) {
             echo "SQL injection!";
@@ -26,6 +26,4 @@ if (empty($_POST['newtext'])) {
     $dblink->close();
 }
 
-header('Location: index.php')
-
-?>
+header('Location: index.php');

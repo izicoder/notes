@@ -12,5 +12,3 @@ $dblink->query('create table notes (
     )');
 
 $dblink->close();
-
-?>
