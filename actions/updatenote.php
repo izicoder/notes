@@ -1,12 +1,12 @@
 <?php
 
-include './mysql.php';
+include '../database/mysql.php';
 
 if (empty($_POST['updatetext'])) {
     echo "You should write something!";
 } else {
 
-    $noteid = (int)$_POST['noteid'];
+    $noteid = (int) $_POST['noteid'];
     $updatetext = $_POST['updatetext'];
 
     $dblink = mysqli_connect($host, $user, $password, $db);
@@ -27,6 +27,4 @@ if (empty($_POST['updatetext'])) {
     $dblink->close();
 }
 
-header('Location: index.php')
-
-?>
+header('Location: ../index.php');

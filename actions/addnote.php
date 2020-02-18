@@ -1,6 +1,6 @@
 <?php
 
-include './mysql.php';
+include '../database/mysql.php';
 
 if (empty($_POST['newtext'])) {
     echo "You should write something!";
@@ -26,4 +26,4 @@ if (empty($_POST['newtext'])) {
     $dblink->close();
 }
 
-header('Location: index.php');
+header('Location: ../index.php');

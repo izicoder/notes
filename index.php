@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <title>Notes</title>
 
@@ -14,9 +14,9 @@
 
 <body>
 
-  <?php include './logic.php' ?>
+  <?php include './logic/logic.php'?>
   <div class="form">
-    <form action="addnote.php" method="post">
+    <form action="actions/addnote.php" method="post">
       <textarea name="newtext" cols="30" rows="5" placeholder="Write something"></textarea><br>
       <input type="submit" value="add note">
     </form>

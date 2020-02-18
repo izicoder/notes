@@ -1,6 +1,6 @@
 <?php
 
-include './mysql.php';
+include './database/mysql.php';
 
 function rendernote($note)
 {
@@ -12,12 +12,12 @@ function rendernote($note)
         <div class="note" id="$safeId">
         <span class="notetext">$safeText</span><br>
         <span class="noteinfo"> posted <b>$safeDate</b></span>
-        <form action="updatenote.php" method="post" class="form">
+        <form action="actions/updatenote.php" method="post" class="form">
         <textarea name="updatetext" placeholder="Write something"></textarea><br>
         <input type="hidden" name="noteid" value="$safeId">
         <input type="submit" value="update note">
         </form>
-        <form action="deletenote.php" method="post" class="form">
+        <form action="actions/deletenote.php" method="post" class="form">
         <input type="hidden" name="noteid" value="$safeId">
         <input type="submit" value="delete note">
         </form>

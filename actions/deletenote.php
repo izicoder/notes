@@ -1,6 +1,6 @@
 <?php
 
-include './mysql.php';
+include '../database/mysql.php';
 
 $id = (int) $_POST['noteid'];
 
@@ -21,4 +21,4 @@ if (!$dblink) {
 
 $dblink->close();
 
-header('Location: index.php');
+header('Location: ../index.php');
