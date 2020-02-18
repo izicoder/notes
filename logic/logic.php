@@ -5,7 +5,7 @@ include './database/mysql.php';
 function rendernote($note)
 {
     $safeId = htmlspecialchars($note[0]);
-    $safeText = htmlspecialchars($note[1]);
+    $safeText = nl2br(htmlspecialchars($note[1]));
     $safeDate = htmlspecialchars($note[2]);
 
     return <<<rendered
