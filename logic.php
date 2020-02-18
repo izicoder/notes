@@ -8,15 +8,15 @@ function rendernote($note) {
     $safeDate = htmlspecialchars($note[2]);
 
     return <<<rendered
-        <div class="text-center" id="$safeId">
-        <span class="text-center">$safeText</span><br>
-        <span class="text-center"> posted <b>$safeDate</b></span>
-        <form action="updatenote.php" method="post">
+        <div class="note" id="$safeId">
+        <span class="notetext">$safeText</span><br>
+        <span class="noteinfo"> posted <b>$safeDate</b></span>
+        <form action="updatenote.php" method="post" class="form">
         <textarea name="updatetext" placeholder="Write something"></textarea><br>
         <input type="hidden" name="noteid" value="$safeId">
         <input type="submit" value="update note">
         </form>
-        <form action="deletenote.php" method="post">
+        <form action="deletenote.php" method="post" class="form">
         <input type="hidden" name="noteid" value="$safeId">
         <input type="submit" value="delete note">
         </form>
