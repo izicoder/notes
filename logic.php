@@ -8,9 +8,9 @@ function rendernote($note) {
     $safeDate = htmlspecialchars($note[2]);
 
     return <<<rendered
-        <div class="note" id="$safeId">
-        <span class="notetext">$safeText</span><br>
-        <span class="noteinfo"> posted <b>$safeDate</b></span>
+        <div class="text-center" id="$safeId">
+        <span class="text-center">$safeText</span><br>
+        <span class="text-center"> posted <b>$safeDate</b></span>
         <form action="updatenote.php" method="post">
         <textarea name="updatetext" placeholder="Write something"></textarea><br>
         <input type="hidden" name="noteid" value="$safeId">
@@ -33,7 +33,7 @@ if (!$dblink) {
     $sql = 'select * from notes order by id desc;';
     $result = $dblink->query($sql);
     if ($result->num_rows === 0) {
-        echo '<p>There is no notes added yet!</p>';
+        echo '<p class="text-center">There is no notes added yet!</p>';
     } else {
         $notes = $result->fetch_all();
         foreach ($notes as $note) {

@@ -13,7 +13,7 @@
   <body>
 
     <?php include './logic.php' ?>
-    <div class="forms">
+    <div class="text-center">
         <form action="addnote.php" method="post">
             Add note <br>
             <textarea name="newtext" cols="30" rows="5" placeholder="Write something"></textarea><br>
