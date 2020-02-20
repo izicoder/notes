@@ -27,4 +27,4 @@ if (empty($_POST['updatetext'])) {
     $dblink->close();
 }
 
-header('Location: ../index.php');
+header('Location: index.php');
